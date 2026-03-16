@@ -1,3 +1,261 @@
+/* Eliminar animación reveal en flip cards para evitar temblor */
+.flip-card-front.reveal,
+.flip-card-back.reveal,
+.flip-card-front .reveal,
+.flip-card-back .reveal {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+/* PARTNERS CARRUSEL */
+.partners_wrap {
+  text-align: center;
+}
+.partners-carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+.partners-track {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  scroll-behavior: auto;
+  width: 95vw;
+  max-width: 1700px;
+  padding: 1rem 0;
+  position: relative;
+  cursor: grab;
+  user-select: none;
+}
+.partners-track a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex: 0 0 250px;
+}
+.partner-img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f3f6f9;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 1rem;
+  flex: 0 0 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.partner-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(7,153,146,0.13);
+}
+/* Logo y texto en el nav */
+.nav-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+.nav-logo-text {
+  font-size: 1rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: -0.6rem;
+  letter-spacing: 0.5px;
+}
+/* Logo en el nav */
+.nav-logo {
+  height: 104px;
+  width: 104px;
+  object-fit: contain;
+  margin-right: 1rem;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+/* SERVICIOS GRID Y CARDS */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+.servicio-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0.3rem 0;
+  margin: 0;
+  text-align: left;
+  transition: none;
+}
+.servicio-card:hover {
+  background: none;
+  box-shadow: none;
+  border: none;
+  transform: none;
+}
+.servicio-icon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(7,153,146,0.10));
+  border-radius: 12px;
+  background: #f3f6f9;
+  padding: 0.5rem;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+.servicio-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.servicio-card h3 {
+  color: var(--primary);
+  font-size: 1.15rem;
+  margin: 0 0 0.2rem 0;
+  font-weight: 700;
+}
+.servicio-card p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .servicio-card {
+    flex-direction: row;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+  .servicio-icon {
+    width: 44px;
+    height: 44px;
+    padding: 0.3rem;
+  }
+}
+/* CARRUSEL DE BENEFICIOS */
+.beneficios-carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+.beneficios-cards-track {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  scroll-behavior: auto;
+  width: 95vw;
+  max-width: 1700px;
+  padding: 1rem 0;
+  position: relative;
+  cursor: grab;
+  user-select: none;
+}
+.beneficio-card {
+  min-width: 400px;
+  max-width: 400px;
+  flex: 0 0 400px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.carrusel-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0 1rem;
+  box-shadow: var(--shadow);
+  transition: background 0.2s;
+}
+.carrusel-btn:hover {
+  background: var(--primary);
+}
+@media (max-width: 900px) {
+  .beneficios-cards-track {
+    width: 98vw;
+    gap: 1rem;
+  }
+  .beneficio-card {
+    min-width: 90vw;
+    max-width: 98vw;
+    flex: 0 0 90vw;
+  }
+}
+/* BENEFICIOS CARDS HORIZONTALES */
+.beneficio-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  min-width: 320px;
+  max-width: 420px;
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.beneficio-card h4 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  min-width: 120px;
+}
+.beneficio-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.beneficio-card li {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 900px) {
+  .beneficios-cards-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .beneficio-card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+}
 :root {
     --bg: #f9f9f9;
     --text: #333;
@@ -25,42 +283,118 @@
     top: 0;
     background: #fff;
     border-bottom: 1px solid var(--border);
-    z-index: 50;
+    z-index: 300;
   }
   .nav__wrap {
     max-width: 1200px;
     margin: auto;
-    padding: .8rem 1rem;
+    padding: 2px 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
   .brand { color: var(--accent); font-weight: 800; text-decoration: none; }
+
+  /* Hamburguesa */
+  .nav__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 100;
+  }
+  .nav__hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .nav__hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav__hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  /* Menú sidebar */
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+    background: #fff;
+    border-left: 1px solid var(--border);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.13);
+    padding: 5rem 0 2rem;
+    z-index: 201;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  .nav__links.open { transform: translateX(0); }
   .nav__links a {
     color: var(--muted);
-    margin-left: 1rem;
+    padding: 0.9rem 2rem;
     text-decoration: none;
     font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
   }
-  .nav__links a:hover { color: var(--primary); }
+  .nav__links a:last-child { border-bottom: none; }
+  .nav__links a:hover { color: var(--primary); background: #f3f6f9; }
+
+  /* Overlay invisible para detectar clic fuera del sidebar */
+  .nav__overlay { display: none; }
   
   /* HERO */
   .hero {
+    position: relative;
     background: #fff;
     color: #000000;
-    min-height: 80vh;
+    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 3rem 1rem;
+    padding: 0;
+    overflow: hidden;
+  }
+  .hero__bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero__content {
+    position: relative;
+    z-index: 2;
   }
   .hero__content .logo {
     max-width: 400px;   /* ajusta el tamaño */
     margin-bottom: 1.5rem;
     animation: fadeIn 1.2s ease;
   }
-  
+   .hero__content h1 {
+    color: white;
+  }
   @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
@@ -250,22 +584,33 @@
   /* WhatsApp flotante */
   .whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 24px;
+    right: 24px;
     background: #25d366;
-    color: white;
-    font-size: 2rem;
-    width: 60px;
-    height: 60px;
+    color: #fff;
+    width: 64px;
+    height: 64px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+    transition: box-shadow 0.2s, transform 0.2s;
+    z-index: 9999;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
-  .whatsapp-float:hover { transform: scale(1.1); }
+  .whatsapp-float svg {
+    width: 36px;
+    height: 36px;
+    display: block;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+  }
   
   /* Animaciones reveal */
   .reveal {
@@ -328,8 +673,69 @@
   }
   
   .solucion-item p {
-    color: var(--muted);
+    color: var(--bg);
     font-size: 0.95rem;
     line-height: 1.5;
   }
-  
+.quienes-somos_wrap{
+  text-align: center;
+}
+
+/* Flip Card Soluciones */
+.flip-card {
+  background: transparent;
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+  min-height: 370px;
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  user-select: none;
+  pointer-events: none;
+}
+.flip-card-front {
+  z-index: 2;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 3;
+  background: var(--accent);
+  color: #fff;
+}
+.flip-card-front h4 {
+  margin: 0 0 0.8rem;
+  color: var(--primary);
+  font-size: 1rem;
+  text-align: center;
+}
+.soluciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
