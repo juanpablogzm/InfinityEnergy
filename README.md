@@ -2,11 +2,11 @@
 
 # ⚡ Infinity Energy
 
-### Landing page de producción para una empresa de soluciones de energía solar y almacenamiento en México.
+### Production landing page for a solar energy and storage company in Mexico.
 
-Sitio corporativo **estático y en producción** (infinityenergy.com.mx) con video hero, tarjetas flip, carrusel infinito de partners y navegación responsive. Cero frameworks: HTML, CSS y JavaScript puros, optimizados para performance.
+A **static, production-ready** corporate site (infinityenergy.com.mx) with a video hero, flip cards, an infinite partner carousel, and responsive navigation. Zero frameworks: pure HTML, CSS, and JavaScript, optimized for performance.
 
-**[🚀 Sitio en vivo](https://infinityenergy.com.mx)**
+**[🚀 Live Site](https://infinityenergy.com.mx)**
 
 ![HTML](https://img.shields.io/badge/HTML5-black?logo=html5) ![CSS](https://img.shields.io/badge/CSS3-1572b6?logo=css3&logoColor=white) ![JS](https://img.shields.io/badge/JavaScript-f7df1e?logo=javascript&logoColor=black) ![Status](https://img.shields.io/badge/status-in--production-10b981)
 
@@ -14,44 +14,44 @@ Sitio corporativo **estático y en producción** (infinityenergy.com.mx) con vid
 
 ---
 
-## ✨ Características
+## ✨ Features
 
 | | |
 |---|---|
-| 🎬 **Hero con video** | Video en bucle como fondo para máximo impacto visual. |
-| 🀄 **Tarjetas flip (3D)** | Soluciones (Time Shifting, Off-Grid, Híbrido) con efecto *flip* suave al hacer hover. |
-| 🎠 **Carrusel infinito de partners** | Muestra marcas clave (Fronius, Sol-Ark, Enphase, Victron, Generac…) en loop sin interrupciones. |
-| 📱 **Menú hamburguesa** | Sidebar móvil accesible (con `aria-expanded`) y navegación *scroll suave*. |
-| 🎯 **Secciones comerciales** | Soluciones, Partners, Beneficios, Servicios, Quiénes Somos y Contacto. |
-| ✨ **Animaciones de scroll** | Elementos con clase `reveal` aparecen al hacer scroll (Intersection Observer). |
+| 🎬 **Video hero** | Looping background video for maximum visual impact. |
+| 🀄 **3D flip cards** | Solutions (Time Shifting, Off-Grid, Hybrid) with a smooth flip effect on hover. |
+| 🎠 **Infinite partner carousel** | Showcases key brands (Fronius, Sol-Ark, Enphase, Victron, Generac…) in an uninterrupted loop. |
+| 📱 **Hamburger menu** | Accessible mobile sidebar (with `aria-expanded`) and smooth-scroll navigation. |
+| 🎯 **Sales sections** | Solutions, Partners, Benefits, Services, About Us, and Contact. |
+| ✨ **Scroll animations** | Elements with the `reveal` class fade in on scroll (Intersection Observer). |
 
 ---
 
 ## 🚀 Running
 
-Como es un sitio fron-estático, basta con servir la carpeta:
+As a front-end-only static site, just serve the folder:
 
 ```bash
-# Con cualquier servidor estático (ej. python)
+# With any static server (e.g. python)
 python3 -m http.server 8080
 ```
 
-Abrí http://localhost:8080.
+Open http://localhost:8080.
 
 ---
 
-## 📁 Estructura
+## 📁 Structure
 
 ```
-├── index.html      # Layout y secciones
-├── styles.css      # Diseño, grid, animaciones y responsive
-├── script.js       # Menú, flip cards, carrusel y reveals
+├── index.html      # Layout and sections
+├── styles.css      # Design, grid, animations, and responsive
+├── script.js       # Menu, flip cards, carousel, and reveals
 ├── CNAME           # infinityenergy.com.mx
-└── imagenes/       # Íconos, fotos y logos de partners
+└── imagenes/       # Icons, photos, and partner logos
 ```
 
 ---
 
-## 📄 Licencia
+## 📄 License
 
-Proyecto de uso privado. Consultá antes de redistribuirlo.
+Private use project. Please ask before redistributing it.
