@@ -1,4 +1,5 @@
 /* Eliminar animación reveal en flip cards para evitar temblor */
+
 .flip-card-front.reveal,
 .flip-card-back.reveal,
 .flip-card-front .reveal,
